@@ -1,5 +1,8 @@
 package io.zipcoder;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by roberthitchens3 on 2/21/16.
  */
@@ -58,6 +61,21 @@ public class MyStringUtils {
     public static String replaceWhiteSpace(String str){
         return str.replaceAll("\\s", "\n");
     }
-    
+    public static String[] allSubstrings(String str){
+        ArrayList<String> allSubs = new ArrayList<String>();
+        for( int c = 0 ; c < str.length() ; c++ )
+        {
+            for( int i = 1 ; i <= str.length() - c ; i++ )
+            {
+                 allSubs.add(str.substring(c, c+i));
+            }
+        }
+
+        String[] allDubs = new String[allSubs.size()];
+        allDubs = allSubs.toArray(allDubs);
+       // String[] allDubs = (String[]) allSubs.toArray();
+        return allDubs;
+    }
+
 
 }

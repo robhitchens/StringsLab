@@ -54,5 +54,12 @@ public class MyStringUtilsSpec {
         String actual= msu.replaceWhiteSpace(str);
         assertEquals("expected and actual should be equal", expected, actual);
     }
+    @Test
+    public void allSubstringsTest(){
+        String str = "butt";
+        String[] expected = {"b", "bu", "but", "butt", "u", "ut","utt","t","tt","t"};
+        String[] actual = msu.allSubstrings(str);
+        assertTrue("expected and actual should be equal", Arrays.equals(expected, actual));
+    }
 
 }
