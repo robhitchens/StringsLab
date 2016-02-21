@@ -5,6 +5,9 @@ package io.zipcoder;
  */
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 public class MyStringUtilsSpec {
     private MyStringUtils msu = new MyStringUtils();
@@ -23,4 +26,19 @@ public class MyStringUtilsSpec {
         String actual = msu.stringCombiner(chrarr);
         assertEquals("expected and actual should be equal",expected, actual);
     }
+    @Test
+    public void stringSeparatorTest(){
+        String str = "milli\nvanilli";
+        String[] expected = {"milli","vanilli"};
+        String[] actual = msu.stringSeparator(str);
+        assertTrue("expected and actual should be equal", Arrays.equals(expected, actual));
+    }
+    @Test
+    public void reverseCapitalTest(){
+        String str = "hELLO";
+        String expected = "Hello";
+        String actual = msu.reverseCapital(str);
+        assertEquals("expected and actual should be equal",expected,actual);
+    }
+    
 }

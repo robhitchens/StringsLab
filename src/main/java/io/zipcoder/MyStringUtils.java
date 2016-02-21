@@ -25,4 +25,13 @@ public class MyStringUtils {
         }
         return strbuild.toString();
     }
+
+    public static String[] stringSeparator(String str){
+        String[] result = str.split("\n");
+        return result;
+    }
+    public static String reverseCapital(String str){
+        return null;
+    }
+
 }
