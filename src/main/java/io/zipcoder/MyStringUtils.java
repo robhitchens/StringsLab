@@ -55,5 +55,9 @@ public class MyStringUtils {
         }
         return strbuild.toString();
     }
+    public static String replaceWhiteSpace(String str){
+        return str.replaceAll("\\s", "\n");
+    }
+    
 
 }

@@ -47,5 +47,12 @@ public class MyStringUtilsSpec {
         String actual = msu.reverseString(str);
         assertEquals("expected and actual should be equal", expected, actual);
     }
+    @Test
+    public void replaceWhiteSpaceTest(){
+        String str= "milli vanilli";
+        String expected = "milli\nvanilli";
+        String actual= msu.replaceWhiteSpace(str);
+        assertEquals("expected and actual should be equal", expected, actual);
+    }
 
 }
