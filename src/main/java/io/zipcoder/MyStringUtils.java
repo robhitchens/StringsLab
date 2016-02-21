@@ -31,7 +31,16 @@ public class MyStringUtils {
         return result;
     }
     public static String reverseCapital(String str){
-        return null;
+        char[] chrs = str.toCharArray();
+        for(int i = 0; i<chrs.length;i++){
+            if(Character.isUpperCase(chrs[i])) {
+                chrs[i] =Character.toLowerCase(chrs[i]);
+            }else if(Character.isLowerCase(chrs[i])) {
+                chrs[i] = Character.toUpperCase(chrs[i]);
+            }
+        }
+        return String.valueOf(chrs);
     }
+    
 
 }

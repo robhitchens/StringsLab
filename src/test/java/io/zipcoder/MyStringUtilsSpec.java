@@ -40,5 +40,5 @@ public class MyStringUtilsSpec {
         String actual = msu.reverseCapital(str);
         assertEquals("expected and actual should be equal",expected,actual);
     }
-    
+
 }
