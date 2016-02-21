@@ -40,5 +40,12 @@ public class MyStringUtilsSpec {
         String actual = msu.reverseCapital(str);
         assertEquals("expected and actual should be equal",expected,actual);
     }
+    @Test
+    public void reverseStringTest(){
+        String str = "milli vanilli";
+        String expected = "illim illinav";
+        String actual = msu.reverseString(str);
+        assertEquals("expected and actual should be equal", expected, actual);
+    }
 
 }

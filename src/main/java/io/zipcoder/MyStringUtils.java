@@ -41,6 +41,19 @@ public class MyStringUtils {
         }
         return String.valueOf(chrs);
     }
-    
+    public static String reverseString(String str){
+        StringBuilder strbuild = new StringBuilder();
+        String[] words = str.split("\\s");
+        StringBuilder reverseWord = new StringBuilder();
+        for(int i = 0; i<words.length; i++){
+            reverseWord.append(words[i]);
+            strbuild.append(reverseWord.reverse());
+            if(i!=words.length-1){
+                strbuild.append(" ");
+            }
+            reverseWord.delete(0, reverseWord.length());
+        }
+        return strbuild.toString();
+    }
 
 }
